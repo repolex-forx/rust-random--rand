@@ -1,0 +1,30 @@
+[2026-09-07T23:03:33Z] === ENRICH ITERATION 1 START | repo=rust-random/rand sha=29056a05 ===
+[2026-09-07T23:03:33Z] [iter=1] PHASE START: enrich repo=rust-random/rand sha=29056a05 runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/29056a05-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/29056a059ef1d97b09e3671c1cdc244cce80885d.nq.gz
+[2026-09-07T23:03:43Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=79 MB
+[2026-09-07T23:03:47Z] [iter=1] AST store loaded triples=630531 load_secs=4 mem_mb=789 MB
+[2026-09-07T23:03:47Z] [iter=1] Step 2: Finding LSP targets mem_mb=789 MB
+[2026-09-07T23:03:49Z] [iter=1] LSP targets found call_sites=3326 imports=0 extends=0 implements=336 secs=1
+[2026-09-07T23:03:50Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=789 MB
+[2026-09-07T23:03:53Z] [iter=1] Position index built positions=42535 nodes_with_types=47959 secs=3 mem_mb=789 MB
+[2026-09-07T23:03:53Z] [iter=1] Step 3: Starting LSP resolution mem_mb=789 MB already_completed_types=[] already_completed_files=0
+[2026-09-07T23:03:53Z] [iter=1] Resolving target type target_type=call_site count=3326
+[2026-09-07T23:04:10Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=0.6 files_done=0 resolved=0 errors=0 current=rand_chacha/src/chacha.rs
+[2026-09-07T23:04:52Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=1.3 files_done=5 resolved=168 errors=114 current=src/rngs/std.rs
+[2026-09-07T23:05:30Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=2.0 files_done=10 resolved=203 errors=256 current=rand_pcg/tests/lcg64xsh32.rs
+[2026-09-07T23:06:00Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=2.5 files_done=14 resolved=327 errors=376 current=src/distributions/other.rs
+[2026-09-07T23:06:35Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=3.0 files_done=18 resolved=356 errors=515 current=src/seq/mod.rs
+[2026-09-07T23:07:13Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=3.7 files_done=24 resolved=546 errors=665 current=src/distributions/binomial.rs
+[2026-09-07T23:07:44Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=4.2 files_done=33 resolved=630 errors=789 current=rand_xoshiro/src/xoroshiro64starstar.rs
+[2026-09-07T23:08:16Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=4.7 files_done=38 resolved=748 errors=913 current=rand_hc/src/hc128.rs
+[2026-09-07T23:08:47Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=5.2 files_done=41 resolved=834 errors=1037 current=rand_jitter/src/lib.rs
+[2026-09-07T23:09:23Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=5.8 files_done=45 resolved=953 errors=1177 current=rand_distr/src/utils.rs
+[2026-09-07T23:09:53Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=6.3 files_done=54 resolved=1067 errors=1299 current=rand_core/src/error.rs
+[2026-09-07T23:10:31Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=7.0 files_done=66 resolved=1154 errors=1441 current=rand_pcg/tests/mcg128xsl64.rs
+[2026-09-07T23:11:02Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=7.5 files_done=83 resolved=1268 errors=1556 current=rand_distr/src/unit_disc.rs
+[2026-09-07T23:11:25Z] [iter=1] Target type resolved target_type=call_site resolved=1348 errors=1619 secs=452 mem_mb=789 MB
+[2026-09-07T23:11:25Z] [iter=1] Resolving target type target_type=implements_clause count=336
+[2026-09-07T23:11:35Z] [iter=1] HEARTBEAT target_type=implements_clause elapsed_min=8.0 files_done=1 resolved=1 errors=0 current=src/seq/mod.rs
+[2026-09-07T23:11:39Z] [iter=1] Target type resolved target_type=implements_clause resolved=335 errors=0 secs=14 mem_mb=789 MB
+[2026-09-07T23:11:58Z] [iter=1] Step 5: Writing final enrichment file triples=29723
+[2026-09-07T23:11:59Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/29056a059ef1d97b09e3671c1cdc244cce80885d.nq.gz size_kb=601
+[2026-09-07T23:11:59Z] [iter=1] PHASE END: enrich elapsed_s=506 elapsed_min=8.4 total_triples=29723
